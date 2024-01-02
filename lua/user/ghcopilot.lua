@@ -1,3 +1,11 @@
+
+
+vim.keymap.set(
+  'n', '<leader>ct',
+  require('copilot.suggestion').toggle_auto_trigger,
+  { noremap = true, silent = true, desc = '[C]opilot [T]oggle_auto_trigger()' }
+)
+
 local M = {
   panel = {
     enabled = true,
@@ -29,7 +37,7 @@ local M = {
   },
   filetypes = {
     yaml = false,
-    markdown = false,
+    markdown = true,
     help = false,
     gitcommit = false,
     gitrebase = false,

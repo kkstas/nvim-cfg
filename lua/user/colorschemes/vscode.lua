@@ -24,7 +24,7 @@ require('vscode').setup({
     -- use colors from this colorscheme by requiring vscode.colors!
     -- Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
 
-    CopilotAnnotation = { fg = "#00ff00", bg = "#ff0000" }, -- nie wiem co to
+    CopilotAnnotation = { fg = "#00ff00", bg = "#ff0000" },
     CopilotSuggestion = { fg = "#9e7c53" },
   }
 })

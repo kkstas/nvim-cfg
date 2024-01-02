@@ -77,7 +77,7 @@ vim.keymap.set('n', "<S-Down>", ":resize +2<CR>")
 vim.keymap.set('n', "<S-Left>", ":vertical resize -2<CR>")
 vim.keymap.set('n', "<S-Right>", ":vertical resize +2<CR>")
 
-vim.keymap.set('n', "<leader>d", ":bd<CR>", { desc = 'close buffer' })
+vim.keymap.set('n', "<leader>d", ":bd<CR>", { desc = 'Close buffer' })
 
 vim.keymap.set('n', "<leader>wv", ":vsplit<CR>", { desc = 'vertical split' })
 vim.keymap.set('n', "<leader>ws", ":split<CR>", { desc = 'horizontal split' })
