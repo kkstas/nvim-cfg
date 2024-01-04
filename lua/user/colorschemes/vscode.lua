@@ -11,11 +11,12 @@ require('vscode').setup({
 
   italic_comments = true,
   disable_nvimtree_bg = true,
-  transparent = true,
+  transparent = false,
 
   -- Override colors (see ./lua/vscode/colors.lua)
   color_overrides = {
-    vscGreen = '#677a6a',
+    vscGreen = '#545454',
+    vscBack = '#1c1d1f',
   },
 
   -- Override highlight groups (see ./lua/vscode/theme.lua)

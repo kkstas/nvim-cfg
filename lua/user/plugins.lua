@@ -147,10 +147,11 @@ require('lazy').setup({
     'Mofiqul/vscode.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'vscode'
       require('user.colorschemes.vscode')
+      vim.cmd.colorscheme 'vscode'
     end,
   },
+
   -- {
   --   -- Theme inspired by Atom
   --   'navarasu/onedark.nvim',
@@ -168,6 +169,7 @@ require('lazy').setup({
       options = {
         icons_enabled = true,
         -- theme = 'onedark',
+        -- theme = 'vscode',
         theme = 'vscode',
 
         section_separators = { left = '', right = '' },
@@ -279,12 +281,14 @@ require('lazy').setup({
       require("todo-comments").setup()
     end,
   },
+
   {
     'windwp/nvim-ts-autotag',
     config = function()
       require('nvim-ts-autotag').setup()
     end,
   },
+
   {
     'ggandor/flit.nvim',
     enabled = true,
@@ -297,6 +301,7 @@ require('lazy').setup({
     end,
     opts = { labeled_modes = 'nx' },
   },
+
   {
     'ggandor/leap.nvim',
     enabled = true,
@@ -307,6 +312,7 @@ require('lazy').setup({
       end
     end,
   },
+
   {
     'mg979/vim-visual-multi',
     lazy = false,
@@ -328,6 +334,12 @@ require('lazy').setup({
   },
 
 
+  {
+    'goolord/alpha-nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('user.alpha')
+    end,
+  },
 
 }, {})
-

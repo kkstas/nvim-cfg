@@ -42,10 +42,6 @@ vim.keymap.set('v',">",">gv")
 -- ESC also clears search highlighting
 vim.keymap.set('n', '<ESC>', ':nohlsearch<Bar>:echo<CR>', { silent = true, noremap = true })
 
-vim.keymap.set('n', "<C-h>", "<C-w>h")
-vim.keymap.set('n', "<C-j>", "<C-w>j")
-vim.keymap.set('n', "<C-k>", "<C-w>k")
-vim.keymap.set('n', "<C-l>", "<C-w>l")
 
 -- numToStr/Navigator.nvim <-> WezTerm - przechodzenie między panes/splits przy <C-hjkl>
 vim.keymap.set('n', "<C-h>", "<CMD>NavigatorLeft<CR>")
@@ -92,3 +88,5 @@ vim.keymap.set('n', '<C-d>', '4j')
 -- x - visual-block mode
 vim.keymap.set('x', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('x', 'K', ":m '<-2<CR>gv=gv")
+
+

@@ -1,9 +1,11 @@
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
+
 local fb_actions = require("telescope._extensions.file_browser.actions")
 
 require('telescope').setup({
   defaults = {
+    initial_mode = "normal",
     mappings = {
       i = {
         ['<C-u>'] = false,
@@ -85,7 +87,12 @@ vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>f', require('telescope.builtin').live_grep, { desc = 'Telescope live_grep' })
-vim.keymap.set('n', '<leader><space>', ":lua require('telescope.builtin').buffers()<CR><ESC>", { desc = 'Find existing buffers' })
+-- vim.keymap.set('n', '<leader>f', ':LiveGrepGitRoot<cr>', { desc = 'Search by Grep on Git Root' })
+
+vim.keymap.set('n', '<leader><space>', ":lua require('telescope.builtin').buffers()<CR>", { desc = 'Find existing buffers' })
+
+vim.keymap.set('n', '<leader>r', require('telescope.builtin').oldfiles, { desc = 'Find recently opened files' })
+
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
